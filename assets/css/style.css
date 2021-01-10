@@ -1,0 +1,412 @@
+:root {
+    --dark-blue: #032e46;
+    --ligt-blue: #96c0c5;
+    --gray: #afc3ce;
+    --cadetblue: cadetblue;
+    --lateblue: darkslateblue;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    margin-right: 3px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(226, 235, 240, 0.8);
+    line-height: 1.5;
+}
+
+/* header section starts */
+header {
+    padding: auto;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header div {
+    background-color: var(--ligt-blue);
+    background-size: cover;
+    width: 35%;
+    height: 7vw;
+    margin: 20px 0px 20px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div h1 {
+    padding: 10px 18px;
+    line-height: 0.9;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: end; 
+    text-shadow: 3px 3px var(--cadetblue);
+}
+
+header div img {
+    width: 33%;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 45px 57px 0 0;
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 2px 15px;
+    margin: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+    color: var(--ligt-blue);
+    border-bottom: 3px solid var(--ligt-blue);
+    text-shadow: 1px 1px var(--cadetblue);
+}
+
+header nav a:hover {
+    background: var(--ligt-blue);
+    color: var(--dark-blue);
+    border-bottom: none;
+    border-radius: 10px;
+    text-shadow: none;
+}
+/* header section ends */
+
+/* footer section starts */
+footer {
+    background: var(--dark-blue);
+    margin: auto;
+    width: 100%;
+    height: 80px;
+}
+
+footer a {
+    color: var(--ligt-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: 2px 2px var(--lateblue)
+}
+/* footer section ends */
+
+/* hero section starts */
+.hero {
+    background-image: url("../images/IMG_7729.JPG");
+    background-size: cover;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    background-position: bottom;
+    text-align: right;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: rgba(228, 228, 46);
+    line-height: 1.2;
+    text-decoration: none;    
+    text-shadow: 3px 3px var(--lateblue);
+    text-align: center; 
+    padding: 40px 60px 30px 0;
+    margin: 0 25px 5px 0;
+}
+/* hero section ends */
+
+/* detail information section starts */
+.files {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 25px -30px;
+    padding: 10px 0;
+}
+
+.sections > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--dark-blue);
+    font-size: 45px;
+    line-height: 1.1;
+    text-shadow: 2px 2px var(--cadetblue);
+}
+
+.sections > div {
+    flex: 0 0 77%;
+}
+
+.sections p {
+    margin-bottom: 20px;
+}
+
+/* grid style starts */
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-item {
+    padding: 0 0 20px 0;
+    border: 5px solid var(--ligt-blue);
+    background-color: var(--gray);
+    min-height: 150px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    transition: all 0.5s;
+}
+
+.run {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.grid-item div {
+    background-color: var(--ligt-blue);
+    padding: 0 15px 0;
+    margin: 0 3px -5px 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.grid-item h3 {
+    font-size: 20px;
+    color: var(--dark-blue);
+}
+
+.grid-item p {
+    color: var(--dark-blue);
+    font-size: 15px;
+}
+
+.run {
+    background-image: url(../images/run-buddy.JPG);
+    background-size: cover;
+}
+
+.hori {
+    background-image: url(../images/horiseon.JPG);
+    background-size: cover;
+}
+
+.none1 {
+    background-image: url(../images/coming-soon.png);
+    background-size: cover;
+}
+
+.none2 {
+    background-image: url(../images/coming-soon.png);
+    background-size: cover;
+}
+
+.none3 {
+    background-image: url(../images/coming-soon.png);
+    background-size: cover;
+}
+/* grid style ends */
+
+/* "contact me" style starts */
+.contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}  
+
+.contact address a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-style: normal;
+    display: flex;
+    padding: 0 2px 2px 0;
+    border-bottom: 3px solid var(--dark-blue);
+    font-size: 17px;
+    text-shadow: 0.4px 0.4px var(--cadetblue);
+}
+
+.contact address a:hover {
+    background: var(--dark-blue);
+    color: var(--ligt-blue);
+    border-radius: 5px;
+    text-shadow: none;
+}
+/* "contact me" style ends */
+/* detail information section ends */
+
+/* media query for screen = < 980px */
+@media screen and (max-width: 980px) {
+    header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div {
+        width:  100%;
+    }
+
+    header div h1 {
+        width: 100%;
+        padding: 5px;
+        margin: 0 30vw 0 0;
+        font-size: 37px;
+        text-align: center;
+    }
+
+    header div img {
+        width: 16%;
+        margin-left: 17vw;
+    }    
+
+    header nav {
+        justify-content: center;
+        margin: auto;
+    }
+
+    header nav a {
+        font-size: 17px;
+    }
+
+    .sections > h2, .sections > div {
+        flex: 0 0 100%;
+    }
+
+    .sections > h2 {
+        border-right: none;
+        border-bottom: 4px solid var(--dark-blue);
+        text-align: left;
+        font-size: 36px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+}
+
+/* media query for screen = < 768px */
+@media screen and (max-width: 768px) {
+    header nav a {
+        font-size: 17px;
+    }
+
+    header div {
+        width:  100%;
+    }
+
+    header div h1 {
+        width: 100%;
+        padding: 5px;
+        margin: 0 20vw 0 0;
+        font-size: 37px;
+        text-align: center;
+    }
+
+    header div img {
+        width: 16%;
+        margin-left: 17vw;
+    } 
+
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero h2 {
+        padding: 0 0 20px 0;
+    }
+
+    .grid-item, .run {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container {
+        grid-template-rows: minmax(300px, 1fr)        
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* media query for screen = < 575px */
+@media screen and (max-width: 575px) {
+    header nav a {
+        font-size: 14px;
+    }
+
+    header div {
+        width:  100%;
+    }
+
+    header div h1 {
+        width: 100%;
+        padding: 5px;
+        margin: 0 20vw 0 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    header div img {
+        width: 17%;
+        margin-left: 20vw;
+    } 
+
+    .hero h2 {
+        padding: 0 0 20px 0;
+    }
+}
