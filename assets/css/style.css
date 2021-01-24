@@ -208,7 +208,7 @@ footer a {
     transition: all 0.5s;
 }
 
-.run {
+.bar {
     grid-column: span 2;
     grid-row: span 2;
 }
@@ -235,28 +235,29 @@ footer a {
     font-size: 15px;
 }
 
-.run {
-    background-image: url(../images/run-buddy.JPG);
+.bar {
+    background-image: url(../images/barkeep.JPG);
     background-size: cover;
 }
 
-.hori {
-    background-image: url(../images/horiseon.JPG);
+.weather {
+    background-image: url(../images/weather-dashboard.JPG);
     background-size: cover;
 }
 
-.none1 {
-    background-image: url(../images/coming-soon.png);
+.quiz {
+    background-image: url(../images/coding-quiz.JPG);
     background-size: cover;
 }
 
-.none2 {
-    background-image: url(../images/coming-soon.png);
+
+.work-day {
+    background-image: url(../images/work-day-scheduler.JPG);
     background-size: cover;
 }
 
-.none3 {
-    background-image: url(../images/coming-soon.png);
+.password {
+    background-image: url(../images/password-generator.png);
     background-size: cover;
 }
 /* grid style ends */
@@ -369,7 +370,7 @@ footer a {
         padding: 0 0 20px 0;
     }
 
-    .grid-item, .run {
+    .grid-item, .bar {
         grid-column: 1 / -1;
     }
 
