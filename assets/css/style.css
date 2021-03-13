@@ -1,11 +1,15 @@
 :root {
-    --primary: #4b0f6b;
-    --ligt-blue: #8da3d2;
-    --gray: #afc3ce;
-    --cadetblue: cadetblue;
-    --lateblue: darkslateblue;
-    --gradient: linear-gradient(319deg, #9574b0 12%, #798ecf 42%, #9574b0 87%);
-    --header: linear-gradient(319deg, #6d388a 12%, #7c3e9f 42%, #5d3e83 87%);;
+    --primary: #331100;
+    --text: #F0F2CB;
+    --red: #9a3001;
+    --gradient: linear-gradient(180deg, 
+                hsla(72, 100%, 98%, 0.9) 0%, 
+                hsla(62, 57%, 92%, 0.9) 50%, 
+                hsla(72, 100%, 98%, 0.9) 100%);
+    --header: linear-gradient(180deg, 
+                hsla(63, 72%, 82%, 0.9) 1%,
+                hsla(63, 60%, 87%, 0.9) 50%, 
+                hsla(63, 72%, 82%, 0.9) 100%);
 }
 
 *{
@@ -45,67 +49,62 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: var(--gradient);
     line-height: 1.5;
+    font-size: 20px;
 }
 
 /* header section starts */
 header {
-    padding: auto;
     background-image: var(--header);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    padding: auto;
 }
 
-header div {
-    background-color: var(--ligt-blue);
-    background-size: cover;
-    width: 35%;
-    height: 7vw;
-    margin: 20px 0px 20px 0; 
+.name {
+    height: 11vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header div h1 {
-    padding: 10px 18px;
-    line-height: 0.9;
+.name a {
+    color: var(--primary);
+    font-size: 48px;
     font-weight: bold;
-    font-size: 40px;
-    text-align: end; 
-    text-shadow: 3px 3px var(--cadetblue);
+    text-decoration: none;
 }
 
-header div img {
-    width: 33%;
+.name a:hover {
+    color: var(--red);
+    text-decoration: none;
 }
+
 
 header nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 45px 57px 0 0;
+    margin: 42px 57px 0 0;
 }
 
 header nav a {
     text-decoration: none;
     padding: 2px 15px;
     margin: 10px;
-    font-weight: lighter;
-    font-size: 20px;
-    color: var(--ligt-blue);
-    border-bottom: 3px solid var(--ligt-blue);
-    text-shadow: 1px 1px var(--cadetblue);
+    font-weight: bold;
+    font-size: 27px;
+    color: var(--primary);
 }
 
 header nav a:hover {
-    background: var(--ligt-blue);
-    color: var(--primary);
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--text);
     border-bottom: none;
     border-radius: 10px;
-    text-shadow: none;
 }
 /* header section ends */
 
@@ -118,41 +117,22 @@ footer {
 }
 
 footer a {
-    color: var(--ligt-blue);
+    color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 22px;
     font-size: 22px;
     text-decoration: none;
-    text-shadow: 2px 2px var(--lateblue)
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--red);
+    text-decoration: none;  
 }
 /* footer section ends */
 
-/* hero section starts */
-.hero {
-    background-image: url("../images/background.png");
-    background-size: cover;
-    min-height: 300px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    background-position: bottom;
-    text-align: right;
-}
-
-.hero h2 {
-    font-size: 36px;
-    color: rgba(228, 228, 46);
-    line-height: 1.2;
-    text-decoration: none;    
-    text-shadow: 3px 3px var(--lateblue);
-    text-align: center; 
-    padding: 40px 60px 30px 0;
-    margin: 0 25px 5px 0;
-}
-/* hero section ends */
 
 /* detail information section starts */
 .files {
@@ -161,80 +141,44 @@ footer a {
     margin-right: auto;
 }
 
-.sections {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin: 25px -30px;
-    padding: 10px 0;
-}
-
-.sections > h2 {
-    flex: 0 0 20%;
-    text-align: right;
-    padding-right: 15px;
-    border-right: 4px solid var(--primary);
-    font-size: 45px;
-    line-height: 1.1;
-    text-shadow: 2px 2px var(--cadetblue);
-}
-
-.sections > div {
-    flex: 0 0 77%;
-}
-
-.sections p {
-    margin-bottom: 20px;
+.section-title {
+    font-size: 48px;
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 20px auto 35px auto; 
+    width: 50%; 
+    font-weight: bold; 
 }
 
 /* grid style starts */
-.grid-container {
-    display: grid;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+.grid-contain {
+    margin-top: 25px;
 }
 
+
 .grid-item {
-    padding: 0 0 20px 0;
-    border: 5px solid var(--ligt-blue);
-    background-color: var(--gray);
+    padding: 0 0 20px 0;  
+    border-radius: 10px;
     min-height: 150px;
     display: flex;
     align-items: flex-end;
     text-decoration: none;
-    background-blend-mode: soft-light;
-    transition: all 0.5s;
 }
 
-.bar {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.grid-item:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.grid-item div {
-    background-color: var(--ligt-blue);
-    padding: 0 15px 0;
-    margin: 0 3px -5px 0;
-    line-height: 0;
+.project {
     text-align: center;
 }
 
-.grid-item h3 {
-    font-size: 20px;
+.project h3 {
+    font-size: 21px;
     color: var(--primary);
+    font-weight: bold;
 }
 
-.grid-item p {
+.project p {
     color: var(--primary);
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .bar {
@@ -245,6 +189,7 @@ footer a {
 .weather {
     background-image: url(../images/weather-dashboard.JPG);
     background-size: cover;
+    height: 100%;
 }
 
 .quiz {
@@ -262,6 +207,27 @@ footer a {
     background-image: url(../images/password-generator.png);
     background-size: cover;
 }
+
+.employee {
+    background-image: url(../images/employee-manager.JPG);
+    background-size: cover;
+}
+
+.note {
+    background-image: url(../images/note-taker.JPG);
+    background-size: cover;
+}
+
+.team {
+    background-image: url(../images/team-profile-generator.JPG);
+    background-size: cover;
+}
+
+.blog {
+    background-image: url(../images/tech-blog.JPG);
+    background-size: cover;
+}
+
 /* grid style ends */
 
 /* "contact me" style starts */
@@ -269,28 +235,42 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
 }  
 
-.contact address a {
-    color: var(--primary);
-    text-decoration: none;
+.contact address div {
     font-style: normal;
-    display: flex;
-    padding: 0 2px 2px 0;
-    border-bottom: 3px solid var(--primary);
+    padding: 0 2px 2px 0;   
     font-size: 17px;
-    text-shadow: 0.4px 0.4px var(--cadetblue);
+    font-weight: bold;
 }
 
-.contact address a:hover {
+.contact address div:hover {
     background: var(--primary);
-    color: var(--ligt-blue);
     border-radius: 5px;
-    text-shadow: none;
+}
+
+.contact address div a {
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+}
+
+.contact address div a:hover {
+    color: var(--text);
 }
 /* "contact me" style ends */
+
+/* carousel style starts */
+.carousel {
+    width: 90vw;
+    height: 50vw;
+    margin: 20px auto;
+}
+
+.left, .right, .carousel-inner {
+    border-radius: 15px;
+}
 /* detail information section ends */
 
 /* media query for screen = < 980px */
@@ -300,22 +280,18 @@ footer a {
         align-items: center;
     }
 
-    header div {
+    .name {
         width:  100%;
+        margin-left: 16px;
     }
 
-    header div h1 {
+    .name a {
         width: 100%;
         padding: 5px;
-        margin: 0 30vw 0 0;
         font-size: 37px;
         text-align: center;
-    }
-
-    header div img {
-        width: 16%;
-        margin-left: 17vw;
-    }    
+    }  
+    
 
     header nav {
         justify-content: center;
@@ -323,93 +299,89 @@ footer a {
     }
 
     header nav a {
-        font-size: 17px;
+        font-size: 22px;
     }
 
-    .sections > h2, .sections > div {
-        flex: 0 0 100%;
-    }
-
-    .sections > h2 {
-        border-right: none;
-        border-bottom: 4px solid var(--primary);
-        text-align: left;
-        font-size: 36px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
+    .section-title {
+        font-size: 40px;
     }
 }
 
 /* media query for screen = < 768px */
 @media screen and (max-width: 768px) {
     header nav a {
-        font-size: 17px;
+        font-size: 20px;
     }
 
-    header div {
-        width:  100%;
-    }
-
-    header div h1 {
-        width: 100%;
-        padding: 5px;
-        margin: 0 20vw 0 0;
-        font-size: 37px;
-        text-align: center;
-    }
-
-    header div img {
-        width: 16%;
-        margin-left: 17vw;
-    } 
-
-    .hero {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .hero h2 {
-        padding: 0 0 20px 0;
-    }
-
-    .grid-item, .bar {
-        grid-column: 1 / -1;
-    }
-
-    .grid-container {
-        grid-template-rows: minmax(300px, 1fr)        
+    .name a {
+        font-size: 35px;
     }
 
     .contact address {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .section-title {
+        font-size: 38px;
+    }
+
+    .contact address div a {
+        font-size: 19px;
+    }
 }
 
 /* media query for screen = < 575px */
 @media screen and (max-width: 575px) {
     header nav a {
-        font-size: 14px;
+        font-size: 18px;
     }
 
-    header div {
-        width:  100%;
+    .name a {
+        font-size: 26px;
     }
 
-    header div h1 {
-        width: 100%;
-        padding: 5px;
-        margin: 0 20vw 0 0;
+    .section-title {
+        font-size: 30px;
+    }
+
+    .contact address div a {
+        font-size: 18px;
+    }
+}
+
+
+/* media query for screen = < 392px */
+@media screen and (max-width: 392px) {
+    body{
+        font-size: 17px;
+    }
+
+    header nav a {
+        font-size: 17px;
+    }
+
+    .name a {
         font-size: 20px;
-        text-align: center;
     }
 
-    header div img {
-        width: 17%;
-        margin-left: 20vw;
-    } 
+    .project h3 {
+        font-size: 18px;
+    }
 
-    .hero h2 {
-        padding: 0 0 20px 0;
+    .project p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .contact address div a {
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 15px;
     }
 }
