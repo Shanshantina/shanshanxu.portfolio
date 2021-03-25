@@ -148,7 +148,7 @@ footer a:hover {
 }
 
 .section-title {
-    font-size: 48px;
+    font-size: 45px;
     border-bottom: 3px solid;
     padding-bottom: 10px;
     text-align: center;
@@ -185,6 +185,11 @@ footer a:hover {
 .project p {
     color: var(--primary);
     font-size: 18px;
+}
+
+.unused {
+    background-image: url(../images/unused.JPG);
+    background-size: cover;
 }
 
 .bar {
@@ -269,8 +274,8 @@ footer a:hover {
 
 /* carousel style starts */
 .carousel {
-    width: 90vw;
-    height: 50vw;
+    width: 70vw;
+    height: 35vw;
     margin: 20px auto;
 }
 
@@ -330,7 +335,7 @@ footer a:hover {
     }
 
     .section-title {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .contact address div a {
@@ -356,10 +361,14 @@ footer a:hover {
     }
 
     .section-title {
-        font-size: 30px;
+        font-size: 25px;
     }
 
-    .contact address div a {
+    .contact address div a, .project p {
+        font-size: 16px;
+    }
+
+    .project h3 {
         font-size: 18px;
     }
 }
@@ -385,11 +394,11 @@ footer a:hover {
     }
 
     .project h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .project p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .section-title {
@@ -397,7 +406,7 @@ footer a:hover {
     }
 
     .contact address div a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     footer a {
